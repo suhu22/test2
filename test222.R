@@ -190,43 +190,27 @@ for(j in 1:10){
 b
 
 #8.2
-bk_1_4 = c()
-bk_1_7 =c()
-bk_2_7 = c()
-bk_1_10 =c()
-bk_2_10 =c()
-bk_3_10 =c()
 
-for(j in 1:10){
-  for(i in 1:1000){
-    if(1<length(a[[i]]) && length(a[[i]])<4){
-      bk_1_4[i] <- a[[i]][1]
-    } else if (4<=length(a[[i]]) && length(a[[i]]) <7){
-      bk_1_7[i] <- a[[i]][1]
-      bk_2_7[i] <- a[[i]][2]
-    } else if ( 7<=length(a[[i]])){
-      bk_1_10[i] <- a[[i]][1]
-      bk_2_10[i] <- a[[i]][2]
-      bk_3_10[i] <- a[[i]][3]
-    }
+score = rep(0,10)
+for(i in 1:length(a)){
+  if(0<length(a[[i]]) && length(a[[i]])<4){
+    c1 <- a[[i]][1]
+    score[c1] <- score[c1] + 1
+  } else if(4<= length(a[[i]])&& length(a[[i]])<7){
+    c11 <- a[[i]][1]
+    score[c11] <- score[c11] + 2
+    c2 <- a[[i]][2]
+    score[c2] <- score[c2] + 1
+  } else {
+    c111 <- a[[i]][1]
+    score[c111] <- score[c111] +3
+    c22 <- a[[i]][2]
+    score[c22] <- score[c22] + 2
+    c3 <- a[[i]][3]
+    score[c3] <- score[c3] + 1
   }
 }
-table(bk_1_4)
-
-win1_1 <- matrix(table(bk_1_4), nrow = 10)
-win1_2 <- matrix(table(bk_1_7), nrow = 10)
-win1_3 <- matrix(table(bk_1_10), nrow = 10)
-win2_1 <- matrix(table(bk_2_7), nrow = 10)
-win2_2 <- matrix(table(bk_2_10), nrow = 10)
-win3_1 <- matrix(table(bk_3_10), nrow = 10)
-
-
-score = c()
-for(j in 1:10){
-  score[j] <- wintable[j,1]+2*wintable[j,2]+3*wintable[j,3] + wintable[j,4]+
-    wintable[j,5]*2+ wintable[j,6]
 score
-which.max(score)
 
 #9
 set.seed(1)
