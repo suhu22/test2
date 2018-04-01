@@ -280,7 +280,7 @@ for(k in 1:200){
   set.seed(k)
   m1= 10
   m2 = 5
-  for(j in 1:10000000){
+  for(j in 1:200000){
     p <- rbinom(1,1,1/2)
     if(p == 0){
       m1 <- m1-1
@@ -310,7 +310,7 @@ for(k in 1:200){
   set.seed(k)
   m1= 10
   m2 = 10
-  for(j in 1:10000000){
+  for(j in 1:200000){
     p <- rbinom(1,1,1/2)
     if(p == 0){
       m1 <- m1-1
@@ -338,7 +338,7 @@ for(k in 1:200){
   set.seed(k)
   m1= 10
   m2 = 15
-  for(j in 1:10000000){
+  for(j in 1:200000){
     p <- rbinom(1,1,1/2)
     if(p == 0){
       m1 <- m1-1
@@ -366,7 +366,7 @@ for(k in 1:200){
   set.seed(k)
   m1= 10
   m2 = 20
-  for(j in 1:10000000){
+  for(j in 1:200000){
     p <- rbinom(1,1,1/2)
     if(p == 0){
       m1 <- m1-1
@@ -395,7 +395,7 @@ for(k in 1:200){
   set.seed(k)
   m1= 10
   m2 = 25
-  for(j in 1:10000000){
+  for(j in 1:200000){
     p <- rbinom(1,1,1/2)
     if(p == 0){
       m1 <- m1-1
