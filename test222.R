@@ -98,14 +98,17 @@ for(i in 1:100){
 
 
 #3
-A <- matrix( runif(100), 50, 5)
-v = c()
-for(i in 1:nrow(A)){
-  for(j in 1:ncol(A)){
-    v[i] <- sum(A[i,j])
+A <- matrix(runif(100), 50, 5)
+
+if (class(A) != 'matrix') stop()
+v = rep(0, nrow(A))
+for (i in 1:nrow(A)) 
+  {
+  v[i] = sum(A[i, ])
   }
-} 
+
 v
+
 
 #4
 
