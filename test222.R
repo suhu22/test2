@@ -52,8 +52,22 @@ for(j in 1:4){
 rdata1 <-rdata[c(2,4),]
 rdata1
 
+#4.1
+a1 = c(TRUE, FALSE)
+a2 = matrix(c(1,0,0,1), nrow = 2)
+a3 = seq(0,1, length.out = 100)
 
-#4
+tmp = list(a1,a2,a3,4,5,6,7)
+tmp             
+
+#4.2 
+tmp[-2]   
+#4.3
+tmp[-2][3]
+#4.4
+length(tmp[-2])  
+
+#5
 a1 <- -1:2
 a2 <- 1:2
 a1 + a2
